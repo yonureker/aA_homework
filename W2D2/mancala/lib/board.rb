@@ -47,7 +47,7 @@ class Board
     # helper method to determine whether #make_move returns :switch, :prompt, or ending_idx
     # debugger
     if ending_idx.between?(0, 5) || ending_idx.between?(7, 12)
-      if @cups[ending_idx].empty?
+      if @cups[ending_idx].size == 1
         ending_idx
       else
         :switch
