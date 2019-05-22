@@ -14,6 +14,8 @@ class Board
       raise "Invalid starting cup"
     end
 
+    #
+
     if @cups[start_pos].empty?
       raise "Starting cup is empty"
     end
