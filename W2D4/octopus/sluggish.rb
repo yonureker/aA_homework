@@ -78,7 +78,7 @@ end
 #--------------------------------------#
 
 Benchmark.bm(25) do |x|
-  x.report('sluggish_octopus:') { 30_000.times do sluggish(fishes) end}
-  x.report('dominant_octopus') { 30_000.times do dominant(fishes) end}
-  x.report('clever_octopus:  ') { 30_000.times do clever(fishes) end}
+  x.report('sluggish_octopus:') { 1_000_000.times do sluggish(fishes) end}
+  x.report('dominant_octopus') { 1_000_000.times do dominant(fishes) end}
+  x.report('clever_octopus:  ') { 1_000_000.times do clever(fishes) end}
 end

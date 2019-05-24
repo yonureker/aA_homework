@@ -14,8 +14,7 @@ def fast_dance(dir, tiles_hash)
 end
 
 
-Benchmark.bm(7) do |x|
+Benchmark.bm(25) do |x|
   x.report("hash")  { 1000000.times do fast_dance("down", tiles_hash) end }
   x.report("array") { 1000000.times do slow_dance("down", tiles_array) end}
 end
-
