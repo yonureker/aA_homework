@@ -28,7 +28,7 @@ class Play
       WHERE 
         title = ?
     SQL
-    return nil unless play.!empty?
+    # return nil unless title.!empty?
   end
 
   def self.find_by_playwright(name)
@@ -77,6 +77,7 @@ class Play
 end
 
 class Playwright
+  attr_accessor :id, :name, :birth_year
   def self.all
     data = PlayDBConnection.instance.execute('SELECT * FROM playwrights')
     data.map { |play| Playwright.new(play) }
