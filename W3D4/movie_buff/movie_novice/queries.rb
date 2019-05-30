@@ -24,6 +24,9 @@ def find_angelina
   Actor.find_by(name: 'Angelina Jolie')
 end
 
+def find.first
+  Actor.find
+
 def top_titles
   Movie
     .select(:id, :title)
